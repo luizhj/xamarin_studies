@@ -5,11 +5,7 @@ using Prism.Mvvm;
 
 namespace xamarin_studies.ViewModels
 {
-    public class MainPageViewModel: BaseViewModel
+    public class BeerAvailabilityMenuPageViewModel : BaseViewModel
     {
-        public MainPageViewModel()
-        {
-
-        }
     }
 }

@@ -5,9 +5,9 @@ using Prism.Mvvm;
 
 namespace xamarin_studies.ViewModels
 {
-    public class MainPageViewModel: BaseViewModel
+    public class BaseViewModel : BindableBase
     {
-        public MainPageViewModel()
+        public BaseViewModel() : base()
         {
 
         }

@@ -1,17 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:xamarin_studies"
-             x:Class="xamarin_studies.Views.MainPage"
+             x:Class="xamarin_studies.Views.BeerTemperatureMenuPage"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              Visual="Material">
-
-    <StackLayout>
-        <Label Text="Main"
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-        <Button Text="TEste"/>
-    </StackLayout>
-
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Beer Temperature"
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

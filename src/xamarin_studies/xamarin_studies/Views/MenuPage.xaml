@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarin_studies.Views.MenuPage"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Visual="Material">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout>
+                <Button x:Name="btnStyles" Text="Styles"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/StylesMenuPage"/>
+
+                <Button x:Name="btnCategories" Text="Categories"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/CategoriesMenuPage"/>
+
+                <Button x:Name="BtnGlassware" Text="Glassware"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/GlasswareMenuPage"/>
+
+                <Button x:Name="BtnSrm" Text="Srm"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/SrmMenuPage"/>
+
+                <Button x:Name="BtnBeerAvailability" Text="Beer Availability"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/BeerAvailabilityMenuPage"/>
+
+                <Button x:Name="BtnFluidSize" Text="Fluid Size"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/FluidSizeMenuPage"/>
+
+                <Button x:Name="BtnBeerTemperature" Text="Beer Temperature"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/BeerTemperatureMenuPage"/>
+
+                <Button x:Name="BtnCountries" Text="Countries"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/CountriesMenuPage"/>
+
+                <Button x:Name="BtnIngredients" Text="Ingredients"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/IngredientsMenuPage"/>
+
+                <Button x:Name="BtnLocationTypes" Text="Location Types"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/LocationTypesMenuPage"/>
+
+                <Button x:Name="BtnFluidSizeVolume" Text="Fluidsize Volume"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/FluidsizeVolumeMenuPage"/>
+
+                <Button x:Name="BtnEventTypes" Text="Event Types"
+                        Command="{Binding OnNavigationCommand}"
+                        CommandParameter="/NavigationPage/EventTypesMenuPage"/>
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>
