@@ -5,3 +5,4 @@ a xamarin project for studies.
 - Material Design - https://medium.com/@bertuzzi/o-x-do-xamarin-forms-3-6-bemvindo-material-design-7ce38f1453b
 - Prism.Dryioc - https://medium.com/@bertuzzi/mvvm-em-a%C3%A7%C3%A3o-prism-library-configurando-o-prism-eb7c9b539a88
 - Linker - https://docs.microsoft.com/en-us/xamarin/cross-platform/deploy-test/linker
+- Refit - https://xamgirl.com/consuming-a-restful-web-service-in-xamarin-forms-using-refit-part-1/
