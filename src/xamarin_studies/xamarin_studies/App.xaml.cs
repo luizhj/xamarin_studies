@@ -4,6 +4,7 @@ using Prism.Ioc;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using xamarin_studies.Views;
+using xamarin_studies.ViewModels;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace xamarin_studies
@@ -35,20 +36,20 @@ namespace xamarin_studies
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
 
-            containerRegistry.RegisterForNavigation<BeerAvailabilityMenuPage>();
-            containerRegistry.RegisterForNavigation<CategoriesMenuPage>();
-            containerRegistry.RegisterForNavigation<CountriesMenuPage>();
-            containerRegistry.RegisterForNavigation<EventTypesMenuPage>();
-            containerRegistry.RegisterForNavigation<FluidSizeMenuPage>();
-            containerRegistry.RegisterForNavigation<FluidsizeVolumeMenuPage>();
-            containerRegistry.RegisterForNavigation<GlasswareMenuPage>();
-            containerRegistry.RegisterForNavigation<HomePage>();
-            containerRegistry.RegisterForNavigation<IngredientsMenuPage>();
-            containerRegistry.RegisterForNavigation<MainPage>();
-            containerRegistry.RegisterForNavigation<MenuPage>();
-            containerRegistry.RegisterForNavigation<LocationTypesMenuPage>();
-            containerRegistry.RegisterForNavigation<SrmMenuPage>();
-            containerRegistry.RegisterForNavigation<StylesMenuPage>();
+            containerRegistry.RegisterForNavigation<BeerAvailabilityMenuPage,BeerAvailabilityMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<CategoriesMenuPage,CategoriesMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<CountriesMenuPage,CountriesMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<EventTypesMenuPage,EventTypesMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<FluidSizeMenuPage,FluidSizeMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<FluidsizeVolumeMenuPage,FluidsizeVolumeMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<GlasswareMenuPage,GlasswareMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<HomePage,HomePageViewModel>();
+            containerRegistry.RegisterForNavigation<IngredientsMenuPage,IngredientsMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<MainPage,MainPageViewModel>();
+            containerRegistry.RegisterForNavigation<MenuPage,MenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<LocationTypesMenuPage,LocationTypesMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<SrmMenuPage,SrmMenuPageViewModel>();
+            containerRegistry.RegisterForNavigation<StylesMenuPage,StylesMenuPageViewModel>();
         }
     }
 }

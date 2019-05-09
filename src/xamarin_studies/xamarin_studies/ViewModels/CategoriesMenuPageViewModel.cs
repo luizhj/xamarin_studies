@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Prism.Navigation;
 
 namespace xamarin_studies.ViewModels
 {
     public class CategoriesMenuPageViewModel : BaseViewModel
     {
+        public CategoriesMenuPageViewModel(INavigationService navigationService) : base(navigationService)
+        {
+
+        }
     }
 }

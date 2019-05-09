@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Prism.Mvvm;
+﻿using Prism.Navigation;
 
 namespace xamarin_studies.ViewModels
 {
     public class HomePageViewModel : BaseViewModel
     {
-        public HomePageViewModel()
+        public HomePageViewModel(INavigationService navigationService) : base(navigationService)
         {
 
         }

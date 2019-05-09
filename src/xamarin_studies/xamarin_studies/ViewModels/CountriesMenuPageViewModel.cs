@@ -1,38 +1,37 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using Prism.Navigation;
+using Prism.Commands;
 using Refit;
-using xamarin_studies.Services;
 using xamarin_studies.Models;
+using xamarin_studies.Services;
 
 namespace xamarin_studies.ViewModels
 {
-    public class CountriesMenuPageViewModel : BaseViewModel, INavigationAware
+    public class CountriesMenuPageViewModel : BaseViewModel
     {
-        public void OnNavigatedFrom(INavigationParameters parameters)
-        {
+        public DelegateCommand RefreshListCommand { get; set; }
 
-        }
-
-        public void OnNavigatedTo(INavigationParameters parameters)
+        private ObservableCollection<Country> _countries;
+        public ObservableCollection<Country> CountriesList
         {
-            CallApi();
+            get { return _countries; }
+            set { SetProperty(ref _countries, value, () => RaisePropertyChanged(nameof(CountriesList))); }
         }
-
-        public void OnNavigatingTo(INavigationParameters parameters)
+        public CountriesMenuPageViewModel(INavigationService navigationService) : base(navigationService)
         {
+            RefreshListCommand = new DelegateCommand(async () => await ExecuteListRefreshAction(() => CallApiAsync()));
         }
-        async void CallApi()
+        public async override void OnNavigatedTo(INavigationParameters parameters)
         {
-            await CallApiAsync();
+            await ExecuteListRefreshAction(() => CallApiAsync());
         }
-        async Task CallApiAsync()
+        private async Task CallApiAsync()
         {
             var nsApi = RestService.For<IBreweryDBApi>(Constants.ApiBaseUrl);
             var countryMessage = await nsApi.GetCountriesMenu(Constants.ApiKey);
             var countries = countryMessage.Data;
+            CountriesList = new ObservableCollection<Country>(countries);
         }
     }
 }
