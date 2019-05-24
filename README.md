@@ -6,3 +6,4 @@ a xamarin project for studies.
 - Prism.Dryioc - https://medium.com/@bertuzzi/mvvm-em-a%C3%A7%C3%A3o-prism-library-configurando-o-prism-eb7c9b539a88
 - Linker - https://docs.microsoft.com/en-us/xamarin/cross-platform/deploy-test/linker
 - Refit - https://xamgirl.com/consuming-a-restful-web-service-in-xamarin-forms-using-refit-part-1/
+- RapidXAML ToolKit - https://github.com/microsoft/Rapid-XAML-Toolkit
