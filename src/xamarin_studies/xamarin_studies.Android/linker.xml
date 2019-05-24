@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <linker>
 
-  <assembly fullname="marvel_heroes">
+  <assembly fullname="xamarin_studies">
     <type fullname="*" />
   </assembly>
   <assembly fullname="DryIoc">
